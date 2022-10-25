@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes;
+package classes;
 
 /**
  *
  * @author 2dam
  */
-public enum UserStatus {
-  ENABLE,
-  DISABLE;
+public interface LoginLogout {
+    
+    public User login(User user);
+    public User SignIn(User user);
 }
