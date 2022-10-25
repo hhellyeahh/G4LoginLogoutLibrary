@@ -12,9 +12,8 @@ import java.sql.Timestamp;
  *
  * @author 2dam
  */
-public class User implements Serializable{
-    
-    
+public class User implements Serializable {
+
     private Integer id;
     private String login;
     private String email;
@@ -22,14 +21,9 @@ public class User implements Serializable{
     private UserPrivilege privilege;
     private UserStatus status;
     private String password;
-    private Timestamp lastPasswordChange; 
+    private Timestamp lastPasswordChange;
 
-    
-    
     // Constructor 
-    
-    
-    
     public User() {
     }
 
@@ -43,10 +37,8 @@ public class User implements Serializable{
         this.password = password;
         this.lastPasswordChange = lastPasswordChange;
     }
-    
-    
-    // Getters and Setters
 
+    // Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -110,16 +102,11 @@ public class User implements Serializable{
     public void setLastPasswordChange(Timestamp lastPasswordChange) {
         this.lastPasswordChange = lastPasswordChange;
     }
-    
-    
-    //To String
 
+    //To String
     @Override
     public String toString() {
         return "User{" + "id=" + id + ", login=" + login + ", email=" + email + ", fullName=" + fullName + ", privilege=" + privilege + ", status=" + status + ", password=" + password + ", lastPasswordChange=" + lastPasswordChange + '}';
     }
-    
-    
-    
-    
+
 }

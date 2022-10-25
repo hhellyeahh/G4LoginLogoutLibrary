@@ -12,12 +12,12 @@ import java.io.Serializable;
  * @author 2dam
  */
 public class Message implements Serializable {
+
     private User user;
     private SignIn signIn;
     private Type callType;
-    
-    //Constructors
 
+    //Constructors
     public Message() {
     }
 
@@ -26,9 +26,8 @@ public class Message implements Serializable {
         this.signIn = signIn;
         this.callType = callType;
     }
-    
-    //Getters and Setters
 
+    //Getters and Setters
     public User getUser() {
         return user;
     }
@@ -52,16 +51,11 @@ public class Message implements Serializable {
     public void setCallType(Type callType) {
         this.callType = callType;
     }
-    
-    
-    //to String
 
+    //to String
     @Override
     public String toString() {
         return "Message{" + "user=" + user + ", signIn=" + signIn + ", callType=" + callType + '}';
     }
-    
-    
-    
-    
+
 }

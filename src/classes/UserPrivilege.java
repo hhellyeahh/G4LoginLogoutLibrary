@@ -12,5 +12,5 @@ package classes;
 public enum UserPrivilege {
     USER,
     ADMIN;
-    
+
 }

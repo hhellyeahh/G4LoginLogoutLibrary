@@ -10,7 +10,8 @@ package classes;
  * @author 2dam
  */
 public interface LoginLogout {
-    
+
     public User login(User user);
+
     public User SignIn(User user);
 }
