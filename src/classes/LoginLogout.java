@@ -7,7 +7,7 @@ package classes;
 
 /**
  *
- * @author 2dam
+ * @author Zulu
  */
 public interface LoginLogout {
     
