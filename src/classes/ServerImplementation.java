@@ -5,14 +5,18 @@
  */
 package classes;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 /**
  *
  * @author 2dam
  */
 public class ServerImplementation implements LoginLogout {
 
-    public ServerImplementation() {
-    }
+       private Connection con;
+    private PreparedStatement stmt;
+    private ConnectionOpenClose conection = new ConnectionOpenClose();
 
     @Override
     public User login(User user) {
