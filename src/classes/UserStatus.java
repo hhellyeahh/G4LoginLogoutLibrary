@@ -10,6 +10,6 @@ package classes;
  * @author 2dam
  */
 public enum UserStatus {
-  ENABLE,
-  DISABLE;
+ DISABLE,
+ ENABLE;
 }

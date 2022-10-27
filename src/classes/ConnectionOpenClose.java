@@ -28,7 +28,7 @@ public class ConnectionOpenClose {
 	protected PreparedStatement stmt;
 
 	public ConnectionOpenClose() {
-		configFile = ResourceBundle.getBundle("controlador/config");
+		configFile = ResourceBundle.getBundle("classes/config");
 		url = configFile.getString("URL");
 		user = configFile.getString("USER");
 		pass = configFile.getString("PASSWORD");
@@ -39,7 +39,7 @@ public class ConnectionOpenClose {
 		try {
 			con = DriverManager.getConnection(url, user, pass);
 		} catch (SQLException e) {
-			
+			e.printStackTrace();
 		}
 		return con;
 	}
