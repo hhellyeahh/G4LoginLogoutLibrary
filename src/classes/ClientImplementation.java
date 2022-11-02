@@ -17,7 +17,7 @@ public class ClientImplementation implements LoginLogout {
     }
 
     @Override
-    public User login(User user) {
+    public User logIn(User user) {
         
         Message message = new Message();
         message.setUser(user);
@@ -29,7 +29,7 @@ public class ClientImplementation implements LoginLogout {
     }
 
     @Override
-    public User SignIn(User user) {
+    public User signUp(User user) {
         
         Message message = new Message();
         message.setUser(user);

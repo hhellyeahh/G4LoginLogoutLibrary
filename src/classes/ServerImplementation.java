@@ -31,7 +31,7 @@ public class ServerImplementation implements LoginLogout {
                 * "ENABLE", "ADMIN", now())
                 */
     @Override
-    public User login(User user) {
+    public User logIn(User user) {
 
         ResultSet rs = null;
         User loginUser = user;
@@ -85,7 +85,7 @@ public class ServerImplementation implements LoginLogout {
     }
 
     @Override
-    public User SignIn(User user) {
+    public User signUp(User user) {
         User userRegister = user;
 
         // Abrimos la conexión

@@ -11,6 +11,6 @@ package classes;
  */
 public interface LoginLogout {
     
-    public User login(User user);
-    public User SignIn(User user);
+    public User logIn(User user);
+    public User signUp(User user);
 }

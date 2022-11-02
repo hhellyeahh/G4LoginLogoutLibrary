@@ -28,14 +28,14 @@ public class pruebaSQL {
         userRegister.setPrivilege(UserPrivilege.USER);
         userRegister.setLastPasswordChange(new java.sql.Timestamp(new java.util.Date().getTime()));
 
-        userRegister = uwu.SignIn(userRegister);
+        userRegister = uwu.signUp(userRegister);
 
         if (!(userRegister == null)) {
             User userLogin = new User();
             userLogin.setLogin(userRegister.getLogin());
             userLogin.setPassword(userRegister.getPassword());
             System.out.println(userLogin.getLogin());
-            userLogin = uwu.login(userLogin);
+            userLogin = uwu.logIn(userLogin);
             if (userLogin == null) {
                 System.out.println("efe login");
             } else {
