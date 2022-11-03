@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,7 +6,10 @@
  */
 package classes;
 
+import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -24,8 +28,19 @@ public class ClientImplementation implements LoginLogout {
         message.setCallType(Type.LOGIN_REQUEST);
         message.setSignIn(new SignIn(new Timestamp(System.currentTimeMillis()), user.getId()));
         
-        
-        return user;
+         ClientSocket clientSocket = new ClientSocket();
+         
+        try {
+            Message returnMessage = new Message();
+            returnMessage = clientSocket.sendRecieve(message);
+            User returnUser = new User();
+            returnUser = returnMessage.getUser();
+            user = returnUser;
+        } catch (IOException ex) {
+            Logger.getLogger(ClientImplementation.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        return user ;
     }
 
     @Override
@@ -40,3 +55,4 @@ public class ClientImplementation implements LoginLogout {
     }
     
 }
+
