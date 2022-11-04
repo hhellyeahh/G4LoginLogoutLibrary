@@ -5,12 +5,15 @@
  */
 package classes;
 
+import exceptions.*;
+
 /**
  *
  * @author Zulu
  */
 public interface LoginLogout {
-    
-    public User logIn(User user);
-    public User signUp(User user);
+
+    public User logIn(User user) throws IncorrectLoginException, ServerException, UnknownTypeException;
+
+    public User signUp(User user) throws ServerException, UserAlreadyExistExpection, UnknownTypeException;
 }
