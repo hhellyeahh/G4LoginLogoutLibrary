@@ -9,10 +9,10 @@ import exceptions.*;
 
 /**
  *
- * @author Zulu
+ * @author UnaiZ
  */
 public interface LoginLogout {
-
+    
     public User logIn(User user) throws IncorrectLoginException, ServerException, UnknownTypeException, MaxUserException;
 
     public User signUp(User user) throws ServerException, UserAlreadyExistExpection, UnknownTypeException, MaxUserException;
