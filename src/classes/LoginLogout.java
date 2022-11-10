@@ -13,7 +13,7 @@ import exceptions.*;
  */
 public interface LoginLogout {
 
-    public User logIn(User user) throws IncorrectLoginException, ServerException, UnknownTypeException;
+    public User logIn(User user) throws IncorrectLoginException, ServerException, UnknownTypeException, MaxUserException;
 
     public User signUp(User user) throws ServerException, UserAlreadyExistExpection, UnknownTypeException;
 }
