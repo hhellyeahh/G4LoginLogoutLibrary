@@ -7,7 +7,7 @@ package exceptions;
 
 /**
  *
- * @author 2dam
+ * @author unaib
  */
 public class IncorrectLoginException extends Exception {
 
