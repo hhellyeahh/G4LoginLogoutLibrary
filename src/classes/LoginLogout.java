@@ -5,13 +5,15 @@
  */
 package classes;
 
+import exceptions.*;
+
 /**
  *
- * @author 2dam
+ * @author UnaiZ
  */
 public interface LoginLogout {
 
-    public User login(User user);
+    public User logIn(User user) throws IncorrectLoginException, ServerException, UnknownTypeException, MaxUserException;
 
-    public User SignIn(User user);
+    public User signUp(User user) throws ServerException, UserAlreadyExistExpection, UnknownTypeException, MaxUserException;
 }

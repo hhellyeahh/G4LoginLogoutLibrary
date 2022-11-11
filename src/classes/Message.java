@@ -21,6 +21,10 @@ public class Message implements Serializable {
     public Message() {
     }
 
+    public Message(Type callType) {
+        this.callType = callType;
+    }
+
     public Message(User user, SignIn signIn, Type callType) {
         this.user = user;
         this.signIn = signIn;
