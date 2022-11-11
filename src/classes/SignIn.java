@@ -13,12 +13,11 @@ import java.sql.Timestamp;
  * @author 2dam
  */
 public class SignIn implements Serializable {
+
     private Timestamp lastSignIn;
     private Integer userID;
-    
-    
-    //Constructor
 
+    //Constructor
     public SignIn() {
     }
 
@@ -26,9 +25,8 @@ public class SignIn implements Serializable {
         this.lastSignIn = lastSignIn;
         this.userID = userID;
     }
-   
-    //Getters and Setters
 
+    //Getters and Setters
     public Timestamp getLastSignIn() {
         return lastSignIn;
     }
@@ -44,9 +42,5 @@ public class SignIn implements Serializable {
     public void setUserID(Integer userID) {
         this.userID = userID;
     }
-    
-    
-    
-    
-    
+
 }
